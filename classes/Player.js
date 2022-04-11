@@ -10,6 +10,7 @@ class Player {
         this.vecX = 0;
         this.vecY = 0;
         this.speed = 10;
+        this.radius = 20;
         this.x = x ? x : 0;
         this.y = y ? y : 0;
         this._name = name ? name : "Player";
@@ -22,7 +23,7 @@ class Player {
             color: '#0f0'
         });
         this.render2d.draw('ball', this.x, this.y, {
-            radius: 20,
+            radius: this.radius,
             color: this._color
         });
     }
