@@ -28,7 +28,8 @@ function update() {
 // Event Listeners
 window.addEventListener('keydown', e => events.onKeyDown(e));
 window.addEventListener('keyup', e => events.onKeyUp(e));
-window.addEventListener('click', e => events.onClick(e));
+canvas.addEventListener('mousedown', e => events.onMouseDown(e));
+canvas.addEventListener('mouseup', e => events.onMouseUp(e));
 
 // Render created game Objects and Initialize the GameLoop
 GObjects.render();

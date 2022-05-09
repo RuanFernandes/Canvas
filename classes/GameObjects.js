@@ -25,6 +25,7 @@ class GameObjects {
         }
 
         this.GameObjects = this.GameObjects.filter(gameObject => gameObject.name !== name);
+
         console.log('GameObject ' + name + ' removed');
     }
 
@@ -46,6 +47,10 @@ class GameObjects {
 
     findObjectByName(name) {
         return this.GameObjects.find(gameObject => gameObject.name === name);
+    }
+
+    findObjectsByNameStart(name) {
+        return this.GameObjects.filter(gameObject => gameObject.name.startsWith(name));
     }
 }
 

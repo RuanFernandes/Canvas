@@ -7,7 +7,7 @@ class Movement {
 
     doMovement(gameObject) {
         if (gameObject.vecX != 0 || gameObject.vecY != 0) {
-            if (this.collision != true) {
+            if (this.collision == true) {
                 let newX = gameObject.x + gameObject.vecX * (gameObject.speed ? gameObject.speed : 1);
                 let newY = gameObject.y + gameObject.vecY * (gameObject.speed ? gameObject.speed : 1);
 
